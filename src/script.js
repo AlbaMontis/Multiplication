@@ -7,22 +7,18 @@ $(document).ready(function() {
 
   $('#coin').text(coins);
 
-	$('#submit').click(function(event) {
-		event.preventDefault();
+	$('body').submit(function(event) {
+		
 		solution = $('#solution').val();
     
 		if (mult == solution) {
-			$('#feedback').text('Вірно! Молодець!');
 			$('#coin').text(coins+5);
 			localStorage.setItem('sum', coins+5);
+			console.log(true);
 
 		} else {
-			$('#feedback').text('Неправильно. Спробуй ще раз.');
+			event.preventDefault();
+			console.log(false);
 		}
 	});
-
-	$('#next').click(function() {
-    location.reload(false);
-	});
-	
 });
