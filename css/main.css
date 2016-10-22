@@ -1,13 +1,39 @@
+body, p, h1 {
+	font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
 .container {
-	width: 70%;
-	height: auto;
-	border: 1px solid #000;
-	margin: 0 auto;
+	margin: 10% auto;
+	text-align: center;
 }
 
 #exercise,
 #result {
-	width: 50%;
-	margin: 0 auto;
-	text-align: center;
+	margin: 40px 0;
+}
+
+#exercise span {
+  font-weight: bold;
+	font-size: 1.5em;
+}
+
+.plaseholder {
+	visibility: hidden;
+}
+
+button,
+#solution {
+	margin: 15px;
+	padding: 1% 5%;
+	border-radius: 5px;
+	font-size: 1em;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
 }
