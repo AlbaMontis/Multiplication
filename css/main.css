@@ -6,13 +6,23 @@ body, p, h1 {
 }
 
 .container {
-	margin: 10% auto;
 	text-align: center;
+	margin-top: 5%;
 }
 
-#exercise,
-#result {
-	margin: 40px 0;
+#header {
+	height: 10vh;
+}
+
+#place {
+  height: 85vh;
+}
+
+.box {
+  border: 1px solid #000;
+  width: 40%;
+  padding: 3%;
+  margin: 0 auto;
 }
 
 #exercise span {
@@ -20,16 +30,21 @@ body, p, h1 {
 	font-size: 1.5em;
 }
 
-.plaseholder {
-	visibility: hidden;
+#testExs {
+	display: inline-block;
 }
 
-button,
-#solution {
-	margin: 15px;
-	padding: 1% 5%;
-	border-radius: 5px;
-	font-size: 1em;
+input[type=number] {
+	margin: 0 3%;
+	width: 60%;
+	height: 40px;
+	display: inline-block;
+  text-align: center;
+}
+
+.wrong:focus {
+  border: 1px solid #ff0000;
+  outline-color: #ff0000;
 }
 
 input[type=number]::-webkit-inner-spin-button, 

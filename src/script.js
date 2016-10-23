@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	manipulateBox();
+ });
+
+function manipulateBox() {
 	var firstNum = $('#firstNum').text(Math.floor((Math.random() * 10) + 1));
 	var secondNum = $('#secondNum').text(Math.floor((Math.random() * 10) + 1));
 	var mult = parseInt(firstNum.text()) * parseInt(secondNum.text());
@@ -7,22 +11,18 @@ $(document).ready(function() {
 
   $('#coin').text(coins);
 
-	$('#submit').click(function(event) {
-		event.preventDefault();
+	$('body').submit(function(event) {
+		
 		solution = $('#solution').val();
     
 		if (mult == solution) {
-			$('#feedback').text('Вірно! Молодець!');
 			$('#coin').text(coins+5);
 			localStorage.setItem('sum', coins+5);
 
 		} else {
-			$('#feedback').text('Неправильно. Спробуй ще раз.');
+			event.preventDefault();
+			$('#solution').addClass('wrong');
 		}
 	});
+}
 
-	$('#next').click(function() {
-    location.reload(false);
-	});
-	
-});

@@ -10,18 +10,25 @@
 <body>
 
 <div class="container">
-  <form>
-    <div id="exercise">
-	    <p id="testExs"><span id="firstNum"></span> * <span id="secondNum"></span> =</p>
-    </div>
-	  <input  id="solution" type="number" name="solution" placeholder="Введи відповідь">
-	  <p id="feedback"><span class="plaseholder">plaseholder</span></p>
-	  <button id="submit" type="submit">Підтвердити</button>
-	  <button id="next" type="button">Наступний приклад</button>
-	</form>
-  <h3 id="result">Твій результат: <span id="coin"></span> балів.</h3>
+  <div id="header">
+	  <h3 id="result">Твій результат: <span id="coin"></span> балів.</h3>
+  </div>
+</div>
+
+<div class="container">
+	<div id="place">
+	  <div class="box">
+		  <form>
+		    <div id="exercise">
+		      <p id="testExs"><span id="firstNum"></span> * <span id="secondNum"></span> =</p>
+		      <input id="solution" type="number" name="solution" placeholder="...">
+		    </div>
+		  </form>
+	  </div>
+	</div>
 </div>
 
 </body>
 <script src="src/script.js"></script>
+<script src="src/animation.js"></script>
 </html>
