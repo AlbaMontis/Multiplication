@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	manipulateBox();
+ });
+
+function manipulateBox() {
 	var firstNum = $('#firstNum').text(Math.floor((Math.random() * 10) + 1));
 	var secondNum = $('#secondNum').text(Math.floor((Math.random() * 10) + 1));
 	var mult = parseInt(firstNum.text()) * parseInt(secondNum.text());
@@ -14,11 +18,11 @@ $(document).ready(function() {
 		if (mult == solution) {
 			$('#coin').text(coins+5);
 			localStorage.setItem('sum', coins+5);
-			console.log(true);
 
 		} else {
 			event.preventDefault();
-			console.log(false);
+			$('#solution').addClass('wrong');
 		}
 	});
-});
+}
+
